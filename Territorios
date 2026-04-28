@@ -1,0 +1,34 @@
+// Inclusão de bibliotecas
+#include <stdio.h>
+
+// Definição da estrutura do território
+typedef struct {
+    char nome[30];
+    char cor[10];
+    int tropas;
+} Territorio;
+
+// Criação de um vetor de territórios
+Territorio territorio[5];
+
+int main() {
+
+    // Laço para guardar os dados dos territórios
+    for (int i = 0; i < 5; i++) {
+        printf("Digite o nome do território: ");
+        scanf("%s", territorio[i].nome);
+        printf("Digite a cor do território: ");
+        scanf("%s", territorio[i].cor);
+        printf("Digite o número de tropas: ");
+        scanf("%d", &territorio[i].tropas);
+    }
+
+    // Laço para exibir os dados dos territórios
+    for (int i = 0; i < 5; i++) {
+        printf("Território: %s\n", territorio[i].nome);
+        printf("Cor: %s\n", territorio[i].cor);
+        printf("Tropas: %d\n", territorio[i].tropas);
+    }
+    
+    return 0;
+}
